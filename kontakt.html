@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Show Exclusiv">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./sass/main.css">
+    <title>Show Exclusiv</title>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__left">
+                    <div class="nav__logo">
+                        <a href="./index.html">
+                            <img src="./assets/img/SE_Logo_2022_weiss.png" alt="">
+                        </a>
+                    </div>
+
+                    <ul class="nav__links">
+                        <li>
+                            <a href="./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="./leistungen.html">Leistungen</a>
+                        </li>
+                        <li>
+                            <a href="./projekte.html">Projekte</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">Über uns</a>
+                        </li>
+                        <li>
+                            <a href="./jobs.html">Jobs</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav__right">
+
+                    <div class="nav__contact">
+                        <div class="nav__social">
+                            <div class="insta">
+                                <a href="#" target="_blank">
+                                    <img class="insta_v1" src="./assets/icons/insta_white.png" alt="">
+                                    <img class="insta_v2" src="./assets/icons/insta_outline.png" alt="">
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="nav__phoneNr">
+                            <a href="tel:00493070787984">
+                                +49 30 70 78 79 84
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="nav__btn">
+                        <a href="./kontakt.html">
+                            <img src="./assets/video/say-hi-animation/say-hi.gif" alt="">
+                            <span>SAY HI!</span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="nav__hamburger__balken">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="nav__hamburger__menu">
+                    <div class="scrollable">
+                        <ul class="nav__hamburger__links">
+                            <li>
+                                <a href="./index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="./leistungen.html">Leistungen</a>
+                            </li>
+                            <li>
+                                <a href="./projekte.html">Projekte</a>
+                            </li>
+                            <li>
+                                <a href="./about.html">Über uns</a>
+                            </li>
+                            <li>
+                                <a href="./jobs.html">Jobs</a>
+                            </li>
+                            
+                        </ul>
+
+                        <div class="nav__hamburger__contact">
+                            <div class="nav__hambuger__social">
+                                <div class="insta">
+                                    <a href="#" target="_blank">
+                                        <img class="insta_v1" src="./assets/icons/insta_white.png" alt="">
+                                        <img class="insta_v2" src="./assets/icons/insta_outline.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="nav__hamburger__phoneNr">
+                                <a href="tel:00493070787984">
+                                    +49 30 70 78 79 84
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero hero--v2">
+            <div class="hero__container">
+                <h1>
+                    Wir freuen uns auf 
+                    <strong>Ihre Nachricht</strong>
+                </h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="form" id="form">
+            <div class="form__container">
+
+                <div class="form__flexContainer">
+
+                    <ul class="form__contactBox">
+                        <li class="form__contactBox__mail"><a href="mailto:info@show-exclusiv.de">info@show-exclusiv.de</a></li>
+                        <li class="form__contactBox__insta"><a href="#" target="_blank">show_exclusiv</a></li>
+                        <li class="form__contactBox__tel"><a href="tel:00493070787984">+49 30 70 78 79 84</a></li>
+                        <li class="form__contactBox__pin">
+                            <a href="https://goo.gl/maps/EbKyqNL6p2ndvLRi9">Show Exclusiv
+                             Hansen-Services GmbH
+                             Wupperstraße 10
+                             Berlin 14167
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="form__form">
+
+                        <div class="form__form__oben">
+                            
+                            <!--Betreff-->
+                            <label for="topic">Wobei können wir helfen?*</label>
+                            <select id="topic" name="topic" required>
+                                <option value="topic1">Bitte auswählen</option>
+                                <option value="topic1">Betreff1</option>
+                                <option value="topic2">Betreff2</option>
+                                <option value="topic3">Betreff3</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form__form__mitte">
+                            <div class="form__links">
+
+                                <!--Name-->
+                                <label for="name"></label>
+                                <input type="text" id="name" name="name" placeholder="Vor- und Nachname*" required>
+
+                                <!--Email-->
+                                <label for="email"></label>
+                                <input type="email" id="email" name="email" placeholder="Email*" required>
+                            </div>
+
+                            <div class="form__rechts">
+
+                                <!--Firma-->
+                                <label for="firma"></label>
+                                <input type="text" id="firma" name="firma" placeholder="Firma">
+
+                                <!--Telefon-->
+                                <label for="telefon"></label>
+                                <input type="tel" id="telefon" name="telefon" placeholder="Telefonnummer">
+                            </div>
+                        </div>
+
+                        <div class="form__form__unten">
+
+                            <!--Nachricht-->
+                            <label for="msg"></label>
+                            <textarea name="msg" id="msg" placeholder="Nachricht"></textarea>
+
+                            <!--Anhang-->
+                            <p>Sie möchten uns etwas mitsenden?</p>
+
+                            <label for="anhang" class="form__form__upload">
+
+                                <span>
+                                    Klicken oder ziehen Sie Ihre Datei in den Bereich um diese hochzuladen
+                                </span>
+
+                                <span>
+                                    Sie können maximal 6 MB hochladen
+                                </span>
+
+                                <input type="file" id="anhang" name="anhang">
+
+                            </label>
+
+                        </div>
+
+                        <div class="form__form__checkbox">
+
+                            <!--DSGVO-->
+                            
+                            <label for="dsgvo"> 
+                                <input type="checkbox" id="dsgvo" name="dsgvo" required>
+                                <span>Durch das Absenden des Kontaktformulars stimme ich der Verarbeitung meiner Daten zu.*</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="form__form__rectBtn">
+                            Nachricht senden
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="fullImg fullImg--v2" id="fullImg--v2">
+            <div class="fullImg__container">
+
+                <a href="https://goo.gl/maps/EbKyqNL6p2ndvLRi9" target="_blank" class="fullImg__img">
+                    <img src="./assets/img/location-map.png" alt="">
+                </a>
+
+            </div>
+        </section>
+
+        <section class="ctaVideo" id="ctaVideo">
+            <video class="ctaVideo__video" src="./assets/video/pexels-anastasia-shuraeva-8071316-1920x1080-24fps.mp4" autoplay loop muted></video>
+
+             <div class="ctaVideo__container">
+
+                <h3 class="ctaVideo__txt">
+                    Interessiert? Lass uns gemeinsam atemberaubende 
+                    <strong> Momente schaffen. </strong> 
+                </h3>
+
+                <a href="./kontakt.html" class="ctaVideo__btn">
+                    <span>Meld dich</span>
+                    bei uns!
+                </a>
+
+             </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+
+            <div class="footer__logo">
+                <a href="./index.html">
+                    <img src="./assets/img/SE_Logo_2022_weiss.png" alt="">
+                </a>
+            </div>
+
+            <div class="footer__location">
+                <a href="https://goo.gl/maps/EbKyqNL6p2ndvLRi9" class="pin">
+                    <p>
+                        Show Exclusiv. Hansen Services GmbH
+                    </p> 
+                    <p>
+                        Wupperstraße 10. 14167 Berlin
+                    </p>
+                </a>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#">Impressum</a>
+                </li>
+                <li>
+                    <a href="#">Datenschutz</a>
+                </li>
+                <li>
+                    <a href="#">AGB</a>
+                </li>
+            </ul>
+
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./js/main.js"></script>
+    
+</body>
+</html>
