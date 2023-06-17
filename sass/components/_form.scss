@@ -1,0 +1,695 @@
+@use '../base'as *;
+
+.form {
+    &__container {
+        @include container;
+    }
+
+    &__flexContainer {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 5rem;
+    }
+
+    &__contactBox {
+        flex-basis: 33%;
+
+        border: 2px solid $black;
+        padding: 2rem;
+        padding-top: 4rem;
+        line-height: 1.33rem;
+
+        max-width: 450px;
+        height: fit-content;
+
+        li {
+
+            max-width: 350px;
+            margin-left: 4rem;
+            transition: all 200ms ease-in-out;
+            margin-bottom: 2.2rem;
+
+            a {
+                color: $black;
+
+                text-decoration: underline 0.08rem rgba(255, 255, 255, 0);
+                transition: all 200ms ease-in-out;
+            }
+
+            cursor: pointer;
+
+            &:hover {
+                a {
+                    text-decoration: underline 0.08rem rgb(0, 0, 0);
+                    transition: all 200ms ease-in-out;
+                }
+            }
+
+                
+
+        }
+
+        &__mail {
+
+            position: relative;
+
+            &::before {
+                content: url(../assets/icons/mail_black.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.2rem;
+                transition: all 200ms ease-in-out;
+            }
+
+            &::after {
+                content: url(../assets/icons/mail_white.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.2rem;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover {
+    
+                &::before {
+                    transition: all 200ms ease-in-out;
+                    opacity: 0;
+                }
+    
+                &::after {
+                    transition: all 200ms ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__insta {
+
+            position: relative;
+
+            &::before {
+                content: url(../assets/icons/insta_black.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.2rem;
+                transition: all 200ms ease-in-out;
+            }
+
+            &::after {
+                content: url(../assets/icons/insta_outline_v2.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.2rem;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover {
+    
+                &::before {
+                    transition: all 200ms ease-in-out;
+                    opacity: 0;
+                }
+    
+                &::after {
+                    transition: all 200ms ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__tel {
+
+            position: relative;
+
+            &::before {
+                content: url(../assets/icons/tel_black.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.3rem;
+                transition: all 200ms ease-in-out;
+            }
+
+            &::after {
+                content: url(../assets/icons/tel_white.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: -0.3rem;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover {
+    
+                &::before {
+                    transition: all 200ms ease-in-out;
+                    opacity: 0;
+                }
+    
+                &::after {
+                    transition: all 200ms ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__pin {
+
+            position: relative;
+            max-width: 230px !important;
+
+            &::before {
+                content: url(../assets/icons/pin_big_black.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: 3rem;
+                transition: all 200ms ease-in-out;
+            }
+
+            &::after {
+                content: url(../assets/icons/pin_big_white.png);
+                position: absolute;
+                left: -2.5rem;
+                bottom: 3rem;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+
+            &:hover {
+    
+                &::before {
+                    transition: all 200ms ease-in-out;
+                    opacity: 0;
+                }
+    
+                &::after {
+                    transition: all 200ms ease-in-out;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__form {
+
+        flex-basis: 66%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        select, input, textarea, textarea#msg {
+            @include plusJakarta;
+            border: unset;
+            border-bottom: 1px solid $black;
+            padding-bottom: 1.2rem;
+            color: $black;
+            opacity: 1;
+
+            font-size: 1.12rem;
+            font-weight: 400;
+        }
+
+        label {
+            margin-bottom: 0.8rem;
+            opacity: 1;
+            
+        }
+
+        select#topic {
+            font-size: 1.25rem;
+        }
+
+        input::placeholder, textarea::placeholder, label#topic {
+            opacity: 1;
+        }
+
+        &__upload {
+            position: relative;
+            margin-top: -2rem;
+
+
+            width: 100%;
+            height: 100%;
+            background-color: $black;
+            color: $white;
+            display: grid;
+            
+            justify-content: center;
+            
+            align-content: center;
+
+            height: 200px;
+            padding-top: 4rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            span {
+                //display: block;
+                text-align: center;
+                font-weight: 400;
+                font-size: 1rem;
+                padding: 0 1rem;
+
+                &:nth-child(2) {
+                    font-size: 0.9rem;
+                    opacity: 0.75;
+                }
+            }
+
+            input {
+                border-bottom: none;
+                width: 250px;
+                margin: 0 auto;
+            }
+
+            input[type="file"]::file-selector-button {
+                margin: 0 auto;
+                opacity: 0;
+                padding-top: 1rem;
+                width: 75px;
+            }
+            
+        }
+
+        input#anhang {
+            max-width: 100%;
+            height: 140px;
+            color: $white;
+            font-size: 0.9rem;
+            @include plusJakarta;
+        }
+
+        textarea#msg {
+            height: 7rem;
+            margin-bottom: 2rem;
+        }
+
+        &__oben {
+
+            display: flex;
+            flex-direction: column;
+
+            select {
+                width: calc(50% - 1rem);
+
+                option {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        &__mitte {
+            display: flex;
+            gap: 2rem;
+
+
+            .form__links, .form__rechts {
+                display: flex;
+                flex-direction: column;
+                gap:  2rem;
+
+                width: 100%;
+            }
+        }
+
+        &__unten {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;;
+
+            & * {
+                width: 100%;
+            }
+
+            p {
+                margin-bottom: 1rem;
+            }
+            
+        }
+        
+        &__checkbox {
+            display: inline-flex;
+            position: relative;
+
+            span {
+                margin-left: 1.75rem;
+            }
+            
+
+            input#dsgvo {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+                appearance: none;
+
+                position: absolute;
+                top: 0.6rem;
+                left: 0rem;
+                height: 16px;
+                width: 16px;
+                border: 1px solid #34495E;
+                outline: none;
+                transition-duration: 0.3s;
+                cursor: pointer;
+                padding-bottom: 0.5rem;
+
+                &:checked {
+                    border: 1px solid #b4b4b4;
+                }
+
+            }
+
+            label{
+                margin-bottom: 0;
+                cursor: pointer;
+            }
+
+            input:checked + span::before {
+                content: '\2713';
+                display: block;
+                text-align: center;
+                position: absolute;
+                left: 0.1rem;
+                top: -0.2rem;
+                padding-top: 0.1rem;
+            }
+        }
+
+        &__rectBtn {
+
+            @include plusJakarta;
+            border: 2px solid $black;
+            cursor: pointer;
+            width: fit-content;
+    
+            padding: 0.8rem 1.5rem;
+            transition: all 300ms ease-in-out;
+    
+            color: $black;
+            font-weight: bold;
+            background-color: $white;
+    
+            opacity: 1;
+    
+            &:hover {
+                color: $white;
+                background-color: $black;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .form__flexContainer {
+        gap: 2rem;
+    }
+
+    .form__contactBox {
+        padding: 0.5rem;
+        padding-top: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .form__flexContainer {
+        flex-direction: column;
+    }
+
+    .form__contactBox {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .form__contactBox__tel::before, .form__contactBox__tel::after {
+        bottom: 3.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .form__contactBox__pin {
+        max-width: 190px !important;
+    }
+}
+
+@media (max-width: 650px) {
+    .form__form input[type="file"]::file-selector-button {
+        width: 60px;
+    }
+}
+
+@media (max-width: 601px) {
+    .form__contactBox {
+        display: block;
+    }
+
+    .form__contactBox__tel::before, .form__contactBox__tel::after {
+        bottom: -0.5rem;
+    }
+
+    .form__contactBox__pin::before, .form__contactBox__pin::after {
+        bottom: 4rem;
+    }
+
+    .form__contactBox__insta::before, .form__contactBox__insta::after {
+        bottom: -0.3rem;
+    }
+
+    .form__form__checkbox input#dsgvo {
+        top: 0.4rem;
+    }
+}
+
+@media (max-width: 520px) {
+    input[type="file"]::file-selector-button {
+        width: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .form__form {
+        gap: 0;
+    }
+
+    .form__form__oben select {
+        width: 100%;
+    }
+
+    .form__form__mitte {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .form__form__mitte .form__links, .form__form__mitte .form__rechts {
+        gap: 0.5rem;
+    }
+
+    .form__form__unten {
+        gap: 0.5rem;
+    }
+
+    .form__form__upload {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .form__form select#topic, .form__form input, .form__form textarea, .form__form textarea#msg {
+        font-size: 0.9rem;
+        padding-bottom: 1.75rem;
+    }
+
+    .form__form label {
+        margin-bottom: 1.5rem;
+    }
+
+    .form__form__checkbox input#dsgvo {
+        top: 0.5rem;
+    }
+    
+}
+
+.form--v2 {
+    background-color: $black;
+    color: $white;
+
+    .form {
+        &__container {
+            @include container;
+        }
+        
+        &__cta {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__contactBox {
+
+            border: 2px solid $white;
+
+            li {
+                a {
+                    color: $white;
+                }
+
+                &:hover {
+                    a {
+                        text-decoration: underline 0.08rem $white;
+                        transition: all 200ms ease-in-out;
+                    }
+                }
+            }
+
+            &__mail {
+                &::before {
+                    content: url(../assets/icons/mail_white.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.2rem;
+                    transition: all 200ms ease-in-out;
+                }
+    
+                &::after {
+                    content: url(../assets/icons/mail_outline.svg);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.2rem;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        transition: all 200ms ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &__insta {
+                &::before {
+                    content: url(../assets/icons/insta_white.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.2rem;
+                    transition: all 200ms ease-in-out;
+                }
+    
+                &::after {
+                    content: url(../assets/icons/insta_outline.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.2rem;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                }
+                
+                &:hover {
+                    &::after {
+                        transition: all 200ms ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &__tel {
+                &::before {
+                    content: url(../assets/icons/tel_white.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.3rem;
+                    transition: all 200ms ease-in-out;
+                }
+    
+                &::after {
+                    content: url(../assets/icons/tel_outline.svg);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: -0.3rem;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        transition: all 200ms ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &__pin {
+                &::before {
+                    content: url(../assets/icons/pin_white.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: 3rem;
+                    transition: all 200ms ease-in-out;
+                }
+    
+                &::after {
+                    content: url(../assets/icons/pin_outline.png);
+                    position: absolute;
+                    left: -2.5rem;
+                    bottom: 3rem;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
+                }
+
+                &:hover {
+                    &::after {
+                        transition: all 200ms ease-in-out;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        &__form {
+
+            &__upload {
+                background-color: $white;
+                color: $black;
+                padding-top: 1rem;
+
+                input#anhang {
+                    color: $black;
+                    background-color: $white;
+                    height: auto;
+                }
+            }
+
+            &__rectBtn {
+                color: white;
+                background-color: $black;
+                border: 2px solid $white;
+                transition: all 300ms ease-in-out;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                    transition: all 300ms ease-in-out;
+                }
+            }
+        }
+    }
+
+    .form__form select, .form__form input, .form__form textarea, .form__form textarea#msg, select#topic {
+        color: $white;
+        background-color: $black;
+        border-bottom: 1px solid $white;
+    }
+}
+
+@media (max-width: 1000px){
+    .form--v2 {
+        .form__contactBox__tel::before, .form__contactBox__tel::after {
+            bottom: 0;
+            top: 0;
+        }
+    }
+}

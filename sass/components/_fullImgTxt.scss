@@ -1,0 +1,153 @@
+@use '../base'as *;
+
+.fullImgTxt {
+
+    background-size: cover;
+    background-position: center center;
+
+    margin: 90px 0;
+
+    &__container {
+        @include container;
+        height: 767px;
+
+        color: $white;
+
+        display: flex;
+        align-items: flex-end;
+        gap: 0 10rem;
+        padding-bottom: 5.5rem;
+
+        justify-content: flex-end;
+        position: relative;
+
+        a {
+            color: $white;
+        }
+    }
+
+    &__txt {
+
+        text-align: end;
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem 0;
+
+        h2 {
+
+            strong {
+                display: block;
+                font-weight: bold;
+            }
+        }
+
+        &__links {
+            font-size: 1.33rem;
+            display: flex;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            
+            .strich {
+
+                display: flex;
+                align-items: center;
+                position: relative;
+
+
+                &:nth-child(1) {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+
+            span {
+                width: 2px;
+                height: 30px;
+                background-color: $white;
+                display: inline-block;
+                margin: 0 1.5rem;
+            }
+
+            /* a {
+
+                &:hover {
+                    @include underlineHover;
+                }
+            } */
+        }
+    }
+
+    &__btn {
+        position: relative;
+        inset: 0;
+
+        @include roundBtn;
+    }
+}
+
+@media (max-width: 1400px){
+    .fullImgTxt {
+        margin: 60px 0;
+    }
+
+    .fullImgTxt__container {
+        height: 550px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .fullImgTxt__container {
+        height: 450px;
+    }
+}
+
+@media (max-width: 900px) {
+    .fullImgTxt__container {
+        height: 440px;
+        gap: 0 5rem;
+    }
+
+    .fullImgTxt__txt__links span {
+        margin: 0 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .fullImgTxt {
+        margin: 45px 0;
+    }
+
+    .threeColCards .withBg {
+        height: 350px;
+    }
+}
+
+@media (max-width: 675px) {
+    .fullImgTxt__txt {
+        gap: 1rem 0;
+        text-align: start;
+        align-self: flex-start;
+    }
+
+    .fullImgTxt__txt__links {
+        justify-content: flex-start;
+    }
+
+    .fullImgTxt__container {
+        gap: 2rem 0;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .fullImgTxt__container a {
+        align-self: flex-start;
+    }
+}
+
+@media(max-width: 400px) {
+    .fullImgTxt__container {
+        flex-wrap: nowrap;
+    }
+}

@@ -1,0 +1,191 @@
+@use '../base'as *; 
+
+.threeColSquares {
+
+    &__container {
+        @include container;
+
+        h2 {
+            margin-bottom: 5rem;
+
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__cardContainer {
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        .squareCard {
+
+            &__img {
+                max-width: 500px;
+                height: 500px;
+
+                margin-bottom: 1.5rem;
+
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    object-position: center center;
+                    object-fit: cover;
+                }
+            }
+
+            &__txt {
+
+                p {
+                    text-transform: uppercase;
+                }
+            }
+
+            &:nth-child(n+10) {
+                display: none;
+            }
+        }
+    }
+
+    &__rectBtn {
+        border: 2px solid $black;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 2rem;
+
+        padding: 0.5rem 1rem;
+        transition: all 300ms ease-in-out;
+
+        color: $black;
+        font-weight: bold;
+
+        opacity: 1;
+
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .threeColSquares__container h2 {
+        margin-bottom: 3rem;
+    }
+
+    .threeColSquares__rectBtn {
+        &:hover {
+            color: inherit;
+            background-color: inherit;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .threeColSquares__cardContainer {
+        gap: 1rem;
+    }
+
+    .threeColSquares__cardContainer .squareCard__img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 900px) {
+    .threeColSquares__cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .threeColSquares__container h2 {
+        margin-bottom: 2rem;
+    }
+
+    .threeColSquares__cardContainer .squareCard__img {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .threeColSquares__container h2 {
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    ul li {
+        line-height: 1.7rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .threeColSquares__cardContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.threeColSquares--v2 {
+    background-color: $black;
+
+    .threeColSquares__container {
+        color: $white;
+
+        .threeColSquares__cardContainer {
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        }
+
+        .squareCard {
+
+            &__img {
+                height: 400px;
+                max-width: 1050px;
+            }
+
+            &__txt {
+                h4 {
+                    margin-bottom: 2rem;
+                }
+
+                .copy {
+                    text-transform: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .threeColSquares--v2 .threeColSquares__container .threeColSquares__cardContainer {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1068px) {
+    .threeColSquares--v2 .threeColSquares__container .threeColSquares__cardContainer  {
+        .squareCard:first-child {
+            display: contents;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .threeColSquares--v2 .threeColSquares__container .squareCard__txt h4 {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 694px) {
+    .threeColSquares--v2 .threeColSquares__container .threeColSquares__cardContainer .squareCard:first-child {
+        display: inherit;
+    }
+
+    .threeColSquares--v2 .threeColSquares__container .threeColSquares__cardContainer {
+        gap: 3rem;
+    }
+}

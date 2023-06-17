@@ -1,0 +1,143 @@
+@use '../base'as *;
+
+.centeredTxtTwoCols {
+
+    &__container {
+        @include container;
+
+        h3 {
+
+            max-width: 1090px;
+            margin: 0 auto;
+
+            font-weight: bold;
+            margin-bottom: 3rem;
+            
+        }
+    }
+
+    &__txt {
+        max-width: 1090px;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        p {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .centeredTxtTwoCols {
+
+        &__txt {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .centeredTxtTwoCols {
+        
+        &__container h3 {
+            margin-bottom: 2rem;
+        }
+
+        &__txt p {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .centeredTxtTwoCols {
+
+        h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+.centeredTxtTwoCols--v2 {
+
+    .centeredTxtTwoCols {
+        &__container {
+            @include container;
+
+            h3 {
+                font-size: 2rem;
+            }
+        }
+
+        &__txt {
+            .centeredTxtTwoCols__abschnitt {
+                margin-bottom: 2rem;
+
+                span {
+                    display: block;
+                    font-weight: bold;
+                }
+
+                ul {
+                    
+                    li {
+                        position: relative;
+                        left: 2rem;
+                        max-width: calc(100% - 2rem);
+
+                        &::before {
+                            content:"";
+                            height: 6px;
+                            width: 20px;
+                            background-color: $copy;
+                            display: inline-block;
+                            margin-right: 1rem;
+                            position: absolute;
+                            top: 0.9rem;
+                            left: -2rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__kasten {
+
+            border: 2px solid $black;
+            padding: 2rem 2rem 0 2rem;
+
+            span {
+                display: block;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+@media (max-width: 1000px) {
+    .centeredTxtTwoCols--v2 {
+        .centeredTxtTwoCols__container {
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .centeredTxtTwoCols--v2 {
+        .centeredTxtTwoCols__kasten {
+            padding: 1.5rem 1.5rem 0 1.5rem;
+        }
+    }
+}

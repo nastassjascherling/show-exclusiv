@@ -1,0 +1,68 @@
+@use '../base'as *;
+
+.quote {
+
+    &__container {
+        @include container;
+    }
+
+    &__txt {
+        max-width: 1090px;
+        margin: 0 auto;
+
+        text-align: center;
+        font-style: italic;
+
+        position: relative;
+
+        &::before {
+            content: url(../assets/icons/quote_grey.png);
+            position: absolute;
+            top: -3rem;
+            left: 0.1rem;
+            z-index: -1;
+        }
+    }
+}
+
+/* @media (max-width: 1200px) {
+    .quote__container .quote__txt {
+        padding: 0 8rem;
+    }
+
+    .quote__txt::before {
+        left: 10rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    .quote__container .quote__txt {
+        padding: 0 6rem;
+    }
+
+    .quote__txt::before {
+        left: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote__container .quote__txt {
+        padding: 0 3rem;
+    }
+
+    .quote__txt::before {
+        left: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .quote__container .quote__txt {
+        padding: 0;
+    }
+}
+
+@media (max-width: 450px) {
+    .quote__txt::before {
+        left: 1rem;
+    }
+} */

@@ -1,0 +1,141 @@
+@use '../base'as *;
+
+.footer {
+    background-color: $black;
+    padding: 35px 0;
+
+    &__container {
+        @include container;
+        align-items: center;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        max-width: 125px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__location {
+        
+        display: flex;
+        gap: 0 2rem;
+        align-items: center;
+        cursor: pointer;
+        transition: all 200ms ease-in-out;
+        margin-left: 2rem;
+
+        a {
+            color: $white;
+        }
+
+       &:hover {
+            a {
+                text-decoration: underline 0.08rem rgba(255, 255, 255, 1);
+                transition: all 200ms ease-in-out;
+            }
+
+            .pin::before {
+                transition: all 200ms ease-in-out;
+                opacity: 0;
+            }
+
+            .pin::after {
+                transition: all 200ms ease-in-out;
+                opacity: 1;
+            }
+        }
+
+        .pin {
+            position: relative;
+            display: flex;
+            gap: 2rem;
+
+            &::before {
+                content: url(../assets/icons/pin_white.png);
+                position: absolute;
+                left: -2rem;
+                bottom: -0.4rem;
+                transition: all 200ms ease-in-out;
+            }
+
+            &::after {
+                content: url(../assets/icons/pin_outline.png);
+                position: absolute;
+                left: -2rem;
+                bottom: -0.4rem;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0 2rem;
+
+        li {
+            a {
+                color: $white;
+            }
+
+            a:hover {
+                @include underlineHover;
+            }
+        }
+    }
+}
+
+@media (max-width: 1330px) {
+    a.pin {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .footer__location .pin {
+        position: static;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer__container {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem 0;
+        align-items: flex-start;
+    }
+
+    .footer__location {
+        flex-direction: column;
+        margin-left: 0;
+        align-items: flex-start;
+
+        .pin {
+            gap: 0;
+            flex-direction: column;
+        }
+        
+    }
+
+    .footer__links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 0;
+    }
+}

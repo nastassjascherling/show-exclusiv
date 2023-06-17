@@ -1,0 +1,203 @@
+@use 'variables'as *;
+
+
+//--------- font-weight: light ---------//
+
+@font-face {
+    src: url("../assets/fonts/plus-jakarta-sans-300.woff");
+    font-family: "plusJakarta-n";
+    font-weight: 300;
+}
+
+@mixin plusJakarta {
+    font-family: "plusJakarta-n";
+    font-weight: 300;
+}
+
+//--------- font-weight: light italic ---------//
+
+@font-face {
+    src: url("../assets/fonts/plus-jakarta-sans-300italic.woff");
+    font-family: "plusJakarta-n";
+    font-weight: 300;
+    font-style: italic;
+}
+
+@mixin plusJakarta-italic {
+    font-family: "plusJakarta-n";
+    font-weight: 300;
+}
+
+//--------- font-weight: regular ---------//
+
+@font-face {
+    src: url("../assets/fonts/plus-jakarta-sans-400.woff");
+    font-family: "plusJakarta-n";
+    font-weight: 400;
+}
+
+@mixin plusJakarta-regular {
+    font-family: "plusJakarta-n";
+    font-weight: 400;
+}
+
+//--------- font-weight: semibold ---------//
+
+@font-face {
+    src: url("../assets/fonts/plus-jakarta-sans-600.woff");
+    font-family: "plusJakarta-n";
+    font-weight: 600;
+}
+
+@mixin plusJakarta-semibold {
+    font-family: "plusJakarta-n";
+    font-weight: 600;
+}
+
+//--------- font-weight: bold ---------//
+
+@font-face {
+    src: url("../assets/fonts/plus-jakarta-sans-700.woff");
+    font-family: "plusJakarta-n";
+    font-weight: 700;
+}
+
+@mixin plusJakarta-bold {
+    font-family: "plusJakarta-n";
+    font-weight: 700;
+}
+
+
+/* ---------- Text ---------- */
+
+@mixin whiteTxt {
+    color: $white;
+}
+
+html {
+    @include plusJakarta;
+    
+    font-size: 18px; //1rem
+    line-height: 36px; //2rem
+
+    @media (max-width: 600px) {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+    color: $copy;
+}
+
+/* ---------- Headlines ---------- */
+
+.heroFont {
+    font-size: 5.6rem; //100px
+    line-height: 6.78rem; //122px
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @media (max-width: 1440px) {
+        font-size: 4.44rem; //80px
+        line-height: 5.6rem; //100px
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 3.8rem;
+        line-height: 5.1rem;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 3.3rem;
+        line-height: 4.5rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2.8rem;
+        line-height: 4rem;
+    }
+
+    @media (max-width: 600px) {
+        font-size: 2.6rem;
+        line-height: 3.5rem;
+    }
+
+    @media (max-width: 450px) {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+
+}
+
+h1, h2 {
+    font-size: 3.56rem; //64px
+    line-height: 4.89rem; //88px
+    font-weight: 300;
+
+    @media (max-width: 1440px) {
+        font-size: 3rem;
+        line-height: 4.4rem;
+    }
+
+    @media (max-width: 1200px) {
+        font-size: 2.5rem;
+        line-height: 3.6rem;
+    }
+
+    @media (max-width: 1000px) {
+        font-size: 2.2rem;
+        line-height: 3.3rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.9rem;
+        line-height: 3rem;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+}
+
+h3 {
+    font-size: 2.44rem; //44px
+    line-height: 4rem; //72px
+    font-weight: 300;
+
+    @media (max-width: 1000px) {
+        font-size: 2.1rem;
+        line-height: 3.1rem;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 1.6rem;
+        line-height: 2.7rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.3rem;
+        line-height: 2.4rem;
+    }
+}
+
+h4 {
+    font-size: 2rem; //36px
+    line-height: 2.44rem; //44px
+    font-weight: 600; //semibold
+
+    @media (max-width: 1315px) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    @media (max-width: 900px) {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+}

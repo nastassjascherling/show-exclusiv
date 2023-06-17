@@ -1,0 +1,91 @@
+@use '../base'as *;
+
+.ctaVideo {
+    position: relative;
+    overflow: hidden;
+
+    height: 600px;
+    display: flex;
+    align-items: center;
+
+    &__video {
+        position: absolute;
+        left:0;
+        bottom:0;
+        z-index: -1;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    &__container {
+        @include container;
+        display: flex;
+        gap: 0px 22%;
+        align-items: center;
+    }
+
+    &__txt {
+        color: $white;
+        max-width: 680px;
+    }
+
+    &__btn {
+        position: relative;
+        @include roundBtn;
+    }
+}
+
+@media (max-width:1200px) {
+    .ctaVideo__container {
+        gap: 0px 5%;
+    }
+
+    .ctaVideo {
+        height: 500px;
+    }
+
+    .ctaVideo__txt {
+        max-width: 622px;
+    }
+}
+
+@media (max-width: 900px) {
+    .ctaVideo {
+        height: 450px;
+    }
+
+    .ctaVideo__txt {
+        max-width: 410px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ctaVideo {
+        height: 360px;
+    }
+
+    .ctaVideo__container {
+        gap: 0;
+    }
+}
+
+@media (max-width: 675px) {
+    .ctaVideo__container {
+        gap: 2rem;
+        flex-direction: column;
+        align-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .ctaVideo__txt {
+        max-width: 100%;
+    }
+
+    .ctaVideo__btn {
+        align-self: flex-start;
+    }
+}

@@ -1,0 +1,39 @@
+@use "./base/"as *;
+@use "./components/" as *;
+
+
+/* ---------- Global styling ---------- */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 1920px;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+section {
+    @include section_padding;
+}
+
+a, li a {
+    text-underline-offset: 0.25rem;
+    text-decoration: none;
+
+    @media (max-width: 675px) {
+        font-size: 16px;
+    }
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+strong {
+    font-weight: bold;
+}
+ 
