@@ -3687,3 +3687,68 @@ strong {
 }
 
 /*# sourceMappingURL=main.css.map */
+
+/*Fixes 28.27.23*/
+
+.fullImgTxt__txt__links a:hover {
+	cursor: inherit;
+}
+
+.fullImgTxt {
+	background-attachment: fixed;
+}
+
+.hero--v2 {
+	height: 45vh;
+    align-items: center;
+}
+
+.hero--v2 .hero__container {
+	    margin-top: 60px;
+}
+
+section {
+	padding: 60px 0;
+}
+
+.roundBtn, 
+.fullImgTxt__btn,
+.ctaVideo__btn {
+	padding: 0.4rem;
+}
+
+
+.hero {
+    animation-name: slowZoom;
+    animation-iteration-count: infinite;
+    animation-duration: 15s !important;
+}
+
+
+@keyframes slowZoom {
+	
+	0% {
+		
+		background-size: 100%;
+	}
+	
+	85% {
+		
+		background-size: 120%;
+	}
+	
+	100% {
+		
+		background-size: 100%;
+	}
+}
+
+.quote__txt::before {
+	top: 0;
+}
+
+
+/* Hide image titles on hover */ 
+img { pointer-events:none; }
+
+
