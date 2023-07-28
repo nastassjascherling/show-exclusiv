@@ -82,3 +82,7 @@ var swiper = new Swiper(".mySwiper", {
     enabled: true,
     },
 });
+
+/* Animation on scroll */
+
+AOS.init();
